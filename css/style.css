@@ -29,6 +29,19 @@ body {
   color: var(--text-primary-color);
 }
 
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
 /* # UTILS */
 
 .wrapper {
@@ -69,22 +82,46 @@ body {
 #sidebar {
   width: var(--sidebar-width);
   flex-shrink: 0;
-  padding: 10px 0;
+  padding: 1rem 0;
   background-color: var(--sidebar-bg-color);
   overflow: hidden;
-
+  gap: 1rem;
   display: flex;
   flex-direction: column;
+  font-size: 0.8rem;
 }
 
-#sidebar > .playlist-add,
-#sidebar > .playlist-list {
-  display: none;
+#sidebar .logo,
+#sidebar .link li,
+#sidebar .playlist-add,
+#sidebar .playlist-list,
+#sidebar .user {
+  padding: 0 1rem;
+}
+
+#sidebar .link li.active {
+  border-left: 3px solid lime;
 }
 
 #sidebar > .user {
   margin-top: auto;
 }
+
+#sidebar .link .icone {
+  width: 40px;
+}
+
+#sidebar .link li {
+  display: inline-block;
+  width: 100%;
+  line-height: 40px;
+}
+
+#sidebar .link li img,
+#sidebar .link li span {
+  vertical-align: middle;
+}
+
 /* # SECTION-MAIN */
 
 #content {
@@ -191,32 +228,6 @@ body {
   }
 
   .d-lg-inline {
-    display: inline;
-  }
-}
-
-/* # MEDIA QUERIES-LARGE DESKTOP XL */
-
-@media screen and (min-width: 1200px) {
-  /* # UTILS */
-
-  .d-xl-none {
-    display: none;
-  }
-
-  .d-xl-flex {
-    display: flex;
-  }
-
-  .d-xl-block {
-    display: block;
-  }
-
-  .d-xl-inline-block {
-    display: inline-block;
-  }
-
-  .d-xl-inline {
     display: inline;
   }
 }

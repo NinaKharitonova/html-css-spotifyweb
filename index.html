@@ -12,10 +12,42 @@
       <div id="top">
         <!--SIDEBAR-->
         <nav id="sidebar">
-          <div class="logo"></div>
-          <nav class="link"></nav>
-          <div class="playlist-add"></div>
-          <div class="playlist-list"></div>
+          <div class="logo">
+            <img
+              src="img/logo-small.svg"
+              class="d-sm-none"
+              alt="Logo piccolo"
+            />
+            <img
+              src="img/logo.svg"
+              class="d-none d-sm-block"
+              alt="Logo normale"
+            />
+          </div>
+          <nav class="link">
+            <ul>
+              <li class="active d-none d-sm-inline">
+                <a href="#">
+                  <img class="icone" src="img/home.svg" alt="Home" />
+                  <span class="d-none d-sm-inline">Home</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img class="icone" src="img/libreria.svg" alt="Ricerca" />
+                  <span class="d-none d-sm-inline">Ricerca</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img class="icone" src="img/search.svg" alt="La tua Libreria" />
+                  <span class="d-none d-sm-inline">La tua libreria</span>
+              </li>
+               
+              </a>
+            </ul>
+           
+          </nav>
+          <div class="playlist-add d-none d-sm-block"></div>
+          <div class="playlist-list d-none d-sm-block"></div>
           <div class="user"></div>
         </nav>
 
