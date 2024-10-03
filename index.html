@@ -3,14 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--COLLEGAMENTO-CSS-->
+
     <link rel="stylesheet" href="css/style.css" />
+
+    <!--COLLEGAMENTO ICONE-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--TITOLO PAGINA-->
+
     <title>Spotify Web</title>
+
   </head>
   <body>
+
     <div class="wrapper">
+
       <!--APP TOP-->
+
       <div id="top">
+
         <!--SIDEBAR-->
+
         <nav id="sidebar">
           <div class="logo">
             <img
@@ -26,7 +41,7 @@
           </div>
           <nav class="link">
             <ul>
-              <li class="active d-none d-sm-inline">
+              <li class="active">
                 <a href="#">
                   <img class="icone" src="img/home.svg" alt="Home" />
                   <span class="d-none d-sm-inline">Home</span>
@@ -46,9 +61,39 @@
             </ul>
            
           </nav>
-          <div class="playlist-add d-none d-sm-block"></div>
-          <div class="playlist-list d-none d-sm-block"></div>
-          <div class="user"></div>
+          <div class="playlist-add d-none d-sm-block">
+            <h3 class="playlist-add-title">PLAYLIST</h3>
+            <button class="playlist-add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            Crea Playlist
+          </div>
+          <div class="playlist-list d-none d-sm-block">
+            <ul>
+              <li>Prima Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Nome Playlist</li>
+              <li>Ultima Playlist</li>
+
+            </ul>
+          </div>
+          <div class="user">
+            <div class="user-download">
+                <img src="img/download.svg" alt="Download">
+                <span class="download-text d-none d-sm-block ">Installa App</span>
+            </div>
+            <div class="user-profile">
+              <div class="profile-color-container">
+              <img src="img/profile.svg" alt="Profile">
+            </div>
+              <span class="profile-text d-none d-sm-block">Jhon Doe</span>
+
+            </div>
+          </div>
         </nav>
 
         <!--MAIN CONTENT-->

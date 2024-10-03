@@ -10,9 +10,9 @@
 
   /* # LAYOUT */
 
-  --player-height: 120px;
-  --sidebar-width: 80px;
+  --sidebar-width: 70px;
   --topbar-height: 90px;
+  --player-height: 80px;
 }
 
 /* # RESET */
@@ -70,6 +70,12 @@ ul {
   display: inline;
 }
 
+/* # SECTION-MAIN */
+
+#content {
+  flex-grow: 1;
+}
+
 /* # TOP */
 
 #top {
@@ -82,13 +88,14 @@ ul {
 #sidebar {
   width: var(--sidebar-width);
   flex-shrink: 0;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   background-color: var(--sidebar-bg-color);
   overflow: hidden;
-  gap: 1rem;
+  gap: 0.6rem;
   display: flex;
   flex-direction: column;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
+  overflow-y: auto;
 }
 
 #sidebar .logo,
@@ -117,15 +124,66 @@ ul {
   line-height: 40px;
 }
 
-#sidebar .link li img,
-#sidebar .link li span {
-  vertical-align: middle;
+#sidebar .link a {
+  display: flex;
+  gap: 0.4rem;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 0.2rem;
 }
 
-/* # SECTION-MAIN */
+/* # SECTION SIDEBAR PLAYLIST-ADD  */
 
-#content {
-  flex-grow: 1;
+#sidebar .playlist-add .playlist-add-button {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: grey;
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+
+#sidebar .playlist-add .playlist-add-title {
+  margin-bottom: 0.6rem;
+}
+/* # SECTION SIDEBAR PLAYLIST-LIST  */
+
+#sidebar .playlist-list {
+  overflow-y: auto;
+  margin-right: 0.5rem;
+  min-height: 100px;
+}
+/* # SECTION-MAIN-USER */
+
+#sidebar .user-download,
+#sidebar .user-profile {
+  text-align: center;
+}
+
+#sidebar .user-download > img {
+  width: 16px;
+  margin: 5px;
+  margin-bottom: 0.5rem;
+}
+
+#sidebar .user-profile > img {
+  width: 25px;
+}
+
+#sidebar .user-profile > .profile-color-container {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(106, 104, 104);
+  overflow: hidden;
+  padding: 3px;
+}
+
+#sidebar .download-text,
+#sidebar .profile-text {
+  text-align: center;
 }
 /* # SECTION-MAIN-TOPBAR*/
 
@@ -157,6 +215,10 @@ ul {
     --sidebar-width: 270px;
   }
 
+  #sidebar .user-download,
+  #sidebar .user-profile {
+    text-align: left;
+  }
   /* # UTILS */
 
   .d-sm-none {
